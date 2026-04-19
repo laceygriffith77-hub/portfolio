@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LG Digital Media</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <nav class="navbar">
+  <div class="navbar__container">
+    <a href="index.html" id="navbar__logo">L-G</a>
+    <div class="navbar__toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <ul class="navbar__menu">
+      <li class="navbar__item"><a href="index.html" class="navbar__links">Home</a></li>
+      <li class="navbar__item"><a href="portfolio.html" class="navbar__links">Portfolio</a></li>
+      <li class="navbar__item"><a href="bio.html" class="navbar__links">Bio</a></li>
+      <li class="navbar__btn"><a href="signup.html" class="button">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="portfolio">
+  <div class="portfolio__container">
+    <div class="portfolio__content">
+      <h1>Portfolio</h1>
+      <h2>Take a look at my work below.</h2>
+      <a href="signup.html" class="main__btn"><span>Hire me here</span></a>
+    </div>
+<div class="portfolio-tabs">
+  <button class="portfolio-tab active" data-target="graphic-design">BRANDING</button>
+  <button class="portfolio-tab" data-target="color-photos">PUBLICATION</button>
+  <button class="portfolio-tab" data-target="bw-photos">ILLUSTRATION</button>
+</div>
+
+<div class="portfolio-panels">
+  <div class="portfolio-panel active" id="graphic-design">
+    <div class="portfolio-grid">
+      <img src="images/photos-7.jpg" alt="Graphic Design Work 1">
+      <img src="images/photos-34.jpg" alt="Graphic Design Work 2">
+      <img src="images/photos-14.jpg" alt="Graphic Design Work 3">
+      <img src="images/photos-6-2.jpg" alt="Graphic Design Work 4">
+    </div>
+  </div>
+
+  <div class="portfolio-panel" id="color-photos">
+    <div class="portfolio-grid">
+      <img src="images/photos-25.jpg" alt="Color Photo 1">
+      <img src="images/photos-3_edited.jpg" alt="Color Photo 2">
+      <img src="images/photos-14.jpg" alt="Color Photo 3">
+      <img src="images/photos-6-2.jpg" alt="Color Photo 4">
+    </div>
+  </div>
+
+  <div class="portfolio-panel bw-panel" id="bw-photos">
+    <div class="portfolio-grid">
+      <img src="images/photos-25.jpg" alt="Black and White Photo 1">
+      <img src="images/photos-3_edited.jpg" alt="Black and White Photo 2">
+      <img src="images/photos-7.jpg" alt="Black and White Photo 3">
+      <img src="images/photos-34.jpg" alt="Black and White Photo 4">
+    </div>
+  </div>
+</div>
+
+<div class="footer__container">
+    <div class="social__media">
+      <div class="social__media--wrap">
+        <div class="footer__logo">
+          <a href="/" id="footer__logo">L-G</a>
+        </div>
+        <p class="website__rights">© L-G 2024. All rights reserved</p>
+        <div class="social__icons">
+          <a class="social__icon--link" href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a class="social__icon--link" href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a class="social__icon--link" href="https://www.youtube.com/watch?v=IxX_QHay02M" target="_blank" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+          <a class="social__icon--link" href="https://x.com/" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a class="social__icon--link" href="https://www.linkedin.com/home" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="app.js"></script>
+</body>
+</html>
