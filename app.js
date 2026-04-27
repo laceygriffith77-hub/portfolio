@@ -6,22 +6,75 @@ menu.addEventListener('click', function() {
   menuLinks.classList.toggle('active');
 });
 
-const tabs = document.querySelectorAll('.portfolio-tab');
-  const panels = document.querySelectorAll('.portfolio-panel');
+const tabs = document.querySelectorAll(".portfolio-tab");
+const panels = document.querySelectorAll(".portfolio-panel");
 
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      const targetId = tab.getAttribute('data-target');
-      const targetPanel = document.getElementById(targetId);
-      const isActive = tab.classList.contains('active');
-
-      tabs.forEach(t => t.classList.remove('active'));
-      panels.forEach(panel => panel.classList.remove('active'));
-
-      if (!isActive) {
-        tab.classList.add('active');
-        targetPanel.classList.add('active');
-      }
-    });
+function openPortfolioTab(targetId) {
+  tabs.forEach((tab) => {
+    tab.classList.remove("active");
   });
 
+  panels.forEach((panel) => {
+    panel.classList.remove("active");
+  });
+
+  const activeTab = document.querySelector(`.portfolio-tab[data-target="${targetId}"]`);
+  const activePanel = document.getElementById(targetId);
+
+  if (activeTab && activePanel) {
+    activeTab.classList.add("active");
+    activePanel.classList.add("active");
+  }
+}
+
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const targetId = tab.getAttribute("data-target");
+    openPortfolioTab(targetId);
+    history.replaceState(null, "", `#${targetId}`);
+  });
+});
+
+const startingTab = window.location.hash.replace("#", "");
+
+if (startingTab) {
+  openPortfolioTab(startingTab);
+}
+
+const imageLinks = document.querySelectorAll(".project-images a");
+const imageModal = document.getElementById("image-modal");
+const imageModalImg = document.getElementById("image-modal-img");
+const imageModalClose = document.getElementById("image-modal-close");
+
+imageLinks.forEach((link) => {
+  link.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    const image = link.querySelector("img");
+
+    imageModalImg.src = link.getAttribute("href");
+    imageModalImg.alt = image ? image.alt : "Expanded portfolio image";
+
+    imageModal.classList.add("active");
+  });
+});
+
+function closeImageModal() {
+  imageModal.classList.remove("active");
+  imageModalImg.src = "";
+  imageModalImg.alt = "";
+}
+
+imageModalClose.addEventListener("click", closeImageModal);
+
+imageModal.addEventListener("click", function(event) {
+  if (event.target === imageModal) {
+    closeImageModal();
+  }
+});
+
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape" && imageModal.classList.contains("active")) {
+    closeImageModal();
+  }
+});

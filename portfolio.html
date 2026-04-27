@@ -1,98 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LG Digital Media</title>
-    <link rel="stylesheet" href="styles.css">
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
-      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
-      crossorigin="anonymous">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
-      rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LG Digital Media</title>
+  <link rel="stylesheet" href="styles.css">
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+    crossorigin="anonymous">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body>
   <nav class="navbar">
-  <div class="navbar__container">
-    <a href="index.html" id="navbar__logo">L-G</a>
-    <div class="navbar__toggle" id="mobile-menu">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
-    <ul class="navbar__menu">
-      <li class="navbar__item"><a href="index.html" class="navbar__links">Home</a></li>
-      <li class="navbar__item"><a href="portfolio.html" class="navbar__links">Portfolio</a></li>
-      <li class="navbar__item"><a href="bio.html" class="navbar__links">Bio</a></li>
-      <li class="navbar__btn"><a href="signup.html" class="button">Contact</a></li>
-    </ul>
-  </div>
-</nav>
+    <div class="navbar__container">
+      <a href="index.html" id="navbar__logo">L-G</a>
 
-<section class="portfolio">
-  <div class="portfolio__container">
-    <div class="portfolio__content">
-      <h1>Portfolio</h1>
-      <h2>Take a look at my work below.</h2>
-      <a href="signup.html" class="main__btn"><span>Hire me here</span></a>
-    </div>
-<div class="portfolio-tabs">
-  <button class="portfolio-tab active" data-target="graphic-design">BRANDING</button>
-  <button class="portfolio-tab" data-target="color-photos">PUBLICATION</button>
-  <button class="portfolio-tab" data-target="bw-photos">ILLUSTRATION</button>
-</div>
+      <div class="navbar__toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
 
-<div class="portfolio-panels">
-  <div class="portfolio-panel active" id="graphic-design">
-    <div class="portfolio-grid">
-      <img src="images/photos-7.jpg" alt="Graphic Design Work 1">
-      <img src="images/photos-34.jpg" alt="Graphic Design Work 2">
-      <img src="images/photos-14.jpg" alt="Graphic Design Work 3">
-      <img src="images/photos-6-2.jpg" alt="Graphic Design Work 4">
+      <ul class="navbar__menu">
+        <li class="navbar__item">
+          <a href="index.html" class="navbar__links">Home</a>
+        </li>
+        <li class="navbar__item">
+          <a href="portfolio.html" class="navbar__links">Portfolio</a>
+        </li>
+        <li class="navbar__item">
+          <a href="bio.html" class="navbar__links">Bio</a>
+        </li>
+        <li class="navbar__btn">
+          <a href="signup.html" class="button">Contact</a>
+        </li>
+      </ul>
     </div>
-  </div>
+  </nav>
 
-  <div class="portfolio-panel" id="color-photos">
-    <div class="portfolio-grid">
-      <img src="images/photos-25.jpg" alt="Color Photo 1">
-      <img src="images/photos-3_edited.jpg" alt="Color Photo 2">
-      <img src="images/photos-14.jpg" alt="Color Photo 3">
-      <img src="images/photos-6-2.jpg" alt="Color Photo 4">
+  <section class="portfolio">
+    <div class="portfolio__container">
+      <div class="portfolio__content">
+        <h1>Portfolio</h1>
+        <h2>Take a look at my work below.</h2>
+        <a href="signup.html" class="main__btn"><span>Hire me here</span></a>
+      </div>
+
+      <div class="portfolio-tabs">
+        <button class="portfolio-tab active" data-target="branding">BRANDING</button>
+        <button class="portfolio-tab" data-target="publication">PUBLICATION</button>
+        <button class="portfolio-tab" data-target="illustration">ILLUSTRATION</button>
+      </div>
+
+      <div class="portfolio-panels">
+
+        <!-- BRANDING -->
+        <div class="portfolio-panel active" id="branding">
+          <div class="project-list">
+
+            <div class="project-card">
+              <div class="project-card__text">
+                <h3>BAMBAM Music Fest</h3>
+                <p>Event branding for a music festival concept, including promotional visuals, poster design, and close-up brand applications.</p>
+              </div>
+
+              <div class="project-images">
+                <img class="project-image--main" src="images/BAMBAMPortfolioSpreadWEBSITE_01.jpg" alt="BAMBAM Music Fest portfolio spread">
+                <img src="images/BAMBAMCloseUpWEBSITE.jpg" alt="Close-up detail of BAMBAM Music Fest design">
+                <img src="images/PosterMOCKWEBSITEspread.jpg" alt="BAMBAM Music Fest poster mockup">
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-card__text">
+                <h3>SHIFT Keyboard</h3>
+                <p>Packaging and brand concept for a Dvorak keyboard, focused on visual flow, product presentation, and retail-style design.</p>
+              </div>
+
+              <div class="project-images">
+                <img class="project-image--main" src="images/FINALshiftDVORAK_v02FLAT.jpg" alt="SHIFT Dvorak keyboard packaging design">
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-card__text">
+                <h3>Awareness Campaign</h3>
+                <p>A campaign design project using emotional messaging, branded visuals, brochure layout, and apparel mockups to create a cohesive concept.</p>
+              </div>
+
+              <div class="project-images">
+                <img class="project-image--main" src="images/CampaignPortfolioSpreadWEBSITE_02.jpg" alt="Awareness campaign portfolio spread">
+                <img src="images/V4hoodiemockcampaignWEBSITE.jpg" alt="Awareness campaign hoodie mockup">
+                <img src="images/campaignbrochureWEBSITE.jpg" alt="Awareness campaign brochure design">
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-card__text">
+                <h3>Luxe Cosmetics</h3>
+                <p>A luxury cosmetics brand identity focused on elegant typography, polished product presentation, and a refined visual system.</p>
+              </div>
+
+              <div class="project-images">
+                <img class="project-image--main" src="images/LuxeCosmeticsLineUpWEBSITE.jpg" alt="Luxe Cosmetics product lineup">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- PUBLICATION -->
+        <div class="portfolio-panel" id="publication">
+          <div class="project-list">
+
+            <div class="project-card">
+              <div class="project-card__text">
+                <h3>Car Magazine Ad & Cover</h3>
+                <p>Publication design exploring editorial layout, automotive visuals, and print-focused composition.</p>
+              </div>
+
+              <div class="project-images">
+                <img class="project-image--main" src="images/car_magazine_mockup-02WEBSITE.jpg" alt="Car magazine ad and cover mockup">
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-card__text">
+                <h3>Heal Yourself Poster</h3>
+                <p>A motivational quote poster focused on typography, visual hierarchy, and expressive print design.</p>
+              </div>
+
+              <div class="project-images">
+                <img class="project-image--main" src="images/newHealYourselfWEBSITE_03.jpg" alt="Heal Yourself motivational poster design">
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-card__text">
+                <h3>Campaign Vinyl Record</h3>
+                <p>A vinyl record design connected to the campaign concept, using print layout and branded visual direction.</p>
+              </div>
+
+              <div class="project-images">
+                <img class="project-image--main" src="images/VINYLrecord.jpg" alt="Campaign vinyl record design">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ILLUSTRATION -->
+        <div class="portfolio-panel" id="illustration">
+          <div class="project-list">
+
+            <div class="project-card">
+              <div class="project-card__text">
+                <h3>Car Line Art</h3>
+                <p>A line art illustration project showing process, structure, and detailed automotive drawing.</p>
+              </div>
+
+              <div class="project-images">
+                <img class="project-image--main" src="images/cardrawingprocessWEBSITE.jpg" alt="Car line art process illustration">
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-card__text">
+                <h3>Luxe Cosmetics Process</h3>
+                <p>Process work for the Luxe Cosmetics brand identity, showing development from early visual ideas to a more refined direction.</p>
+              </div>
+
+              <div class="project-images">
+                <img class="project-image--main" src="images/LuxeCosmeticsProcessWEBSITE.jpg" alt="Luxe Cosmetics process work">
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-card__text">
+                <h3>Inflated Posters</h3>
+                <p>A playful poster and wallpaper series using inflated visual forms, color, and experimental composition.</p>
+              </div>
+
+              <div class="project-images">
+                <img class="project-image--main" src="images/InflatedPosters_SpreadWEBSITE_02.jpg" alt="Inflated posters spread">
+                <img src="images/inflatedwallpapers-01-CROPPED.png" alt="Inflated wallpaper design one">
+                <img src="images/inflatedwallpapers-02-CROPPED.png" alt="Inflated wallpaper design two">
+                <img src="images/inflatedwallpapers-03-CROPPED.png" alt="Inflated wallpaper design three">
+                <img src="images/inflatedwallpapers-05-CROPPED.png" alt="Inflated wallpaper design four">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div class="portfolio-panel bw-panel" id="bw-photos">
-    <div class="portfolio-grid">
-      <img src="images/photos-25.jpg" alt="Black and White Photo 1">
-      <img src="images/photos-3_edited.jpg" alt="Black and White Photo 2">
-      <img src="images/photos-7.jpg" alt="Black and White Photo 3">
-      <img src="images/photos-34.jpg" alt="Black and White Photo 4">
-    </div>
-  </div>
-</div>
-
-<div class="footer__container">
+  <div class="footer__container">
     <div class="social__media">
       <div class="social__media--wrap">
         <div class="footer__logo">
           <a href="/" id="footer__logo">L-G</a>
         </div>
+
         <p class="website__rights">© L-G 2024. All rights reserved</p>
+
         <div class="social__icons">
-          <a class="social__icon--link" href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-          <a class="social__icon--link" href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a class="social__icon--link" href="https://www.youtube.com/watch?v=IxX_QHay02M" target="_blank" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
-          <a class="social__icon--link" href="https://x.com/" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          <a class="social__icon--link" href="https://www.linkedin.com/home" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a class="social__icon--link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+
+          <a class="social__icon--link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+
+          <a class="social__icon--link" href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+
+          <a class="social__icon--link" href="https://www.linkedin.com/home" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
         </div>
       </div>
     </div>
   </div>
 
-<script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
