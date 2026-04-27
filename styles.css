@@ -774,9 +774,23 @@ img {
 }
 
 .container input[type="text"]:focus,
+.container input[type="email"]:focus,
 .container select:focus,
 .container textarea:focus {
   border-bottom-color: var(--yellow);
+}
+
+.container input[type="email"] {
+  background: transparent;
+  color: var(--text);
+}
+
+.container input:-webkit-autofill,
+.container input:-webkit-autofill:hover,
+.container input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #ffffff;
+  -webkit-box-shadow: 0 0 0px 1000px #000000 inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .container select {
