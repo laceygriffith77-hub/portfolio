@@ -767,6 +767,16 @@ img {
   transition: border-color 0.3s ease, color 0.3s ease;
 }
 
+.container input,
+.container select,
+.container textarea {
+  color-scheme: dark;
+}
+
+.container input::-webkit-contacts-auto-fill-button {
+  filter: invert(1);
+}
+
 .container input[type="text"]::placeholder,
 .container input[type="email"]::placeholder,
 .container textarea::placeholder {
