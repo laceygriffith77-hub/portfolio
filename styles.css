@@ -692,6 +692,11 @@ img {
   font-size: clamp(1.05rem, 1.8vw, 1.2rem);
   line-height: 1.9;
   color: var(--text-soft);
+  margin-bottom: 1.25rem;
+}
+
+.bio__content p:last-child {
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -707,6 +712,7 @@ img {
     line-height: 1.75;
   }
 } 
+
 /* CONTACT PAGE */
 .container {
   background: #000000;
