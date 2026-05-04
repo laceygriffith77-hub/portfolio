@@ -78,3 +78,35 @@ document.addEventListener("keydown", function(event) {
     closeImageModal();
   }
 });
+
+// Form submission handling for signup.html
+if (document.querySelector('form')) {
+  const form = document.querySelector('form');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    try {
+      const response = await fetch('https://formspree.io/f/xdayvbrq', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      if (response.ok) {
+        window.location.href = 'thanks.html';
+      } else {
+        alert('There was an error sending your message. Please try again.');
+      }
+    } catch (error) {
+      alert('There was an error sending your message. Please try again.');
+    }
+  });
+}
+
+// Redirect from thanks.html after 5 seconds
+if (window.location.pathname.includes('thanks.html')) {
+  setTimeout(function() {
+    window.location.href = 'index.html';
+  }, 5000);
+}
