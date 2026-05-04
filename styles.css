@@ -603,6 +603,7 @@ img {
   color: var(--text-soft);
   line-height: 1.7;
   font-size: 1rem;
+  margin-top: 1.5rem;
 }
 
 .project-images {
@@ -611,9 +612,15 @@ img {
   gap: 0.9rem;
 }
 
+.project-images a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .project-images img {
   width: 100%;
-  height: 260px;
+  height: 400px;
   object-fit: cover;
   border-radius: 18px;
   border: 1px solid var(--border);
