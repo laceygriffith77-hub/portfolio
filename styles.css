@@ -144,7 +144,6 @@ img {
   min-height: calc(70vh - 60px);
   background: #000000;
   overflow: hidden;
-  flex: 1;
 }
 
 .main::before {
