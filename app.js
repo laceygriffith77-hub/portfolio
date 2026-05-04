@@ -46,38 +46,40 @@ const imageModal = document.getElementById("image-modal");
 const imageModalImg = document.getElementById("image-modal-img");
 const imageModalClose = document.getElementById("image-modal-close");
 
-imageLinks.forEach((link) => {
-  link.addEventListener("click", function(event) {
-    event.preventDefault();
+if (imageModal && imageModalImg && imageModalClose && imageLinks.length > 0) {
+  imageLinks.forEach((link) => {
+    link.addEventListener("click", function(event) {
+      event.preventDefault();
 
-    const image = link.querySelector("img");
+      const image = link.querySelector("img");
 
-    imageModalImg.src = link.getAttribute("href");
-    imageModalImg.alt = image ? image.alt : "Expanded portfolio image";
+      imageModalImg.src = link.getAttribute("href");
+      imageModalImg.alt = image ? image.alt : "Expanded portfolio image";
 
-    imageModal.classList.add("active");
+      imageModal.classList.add("active");
+    });
   });
-});
 
-function closeImageModal() {
-  imageModal.classList.remove("active");
-  imageModalImg.src = "";
-  imageModalImg.alt = "";
+  function closeImageModal() {
+    imageModal.classList.remove("active");
+    imageModalImg.src = "";
+    imageModalImg.alt = "";
+  }
+
+  imageModalClose.addEventListener("click", closeImageModal);
+
+  imageModal.addEventListener("click", function(event) {
+    if (event.target === imageModal) {
+      closeImageModal();
+    }
+  });
+
+  document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape" && imageModal.classList.contains("active")) {
+      closeImageModal();
+    }
+  });
 }
-
-imageModalClose.addEventListener("click", closeImageModal);
-
-imageModal.addEventListener("click", function(event) {
-  if (event.target === imageModal) {
-    closeImageModal();
-  }
-});
-
-document.addEventListener("keydown", function(event) {
-  if (event.key === "Escape" && imageModal.classList.contains("active")) {
-    closeImageModal();
-  }
-});
 
 if (document.querySelector('form')) {
   const form = document.querySelector('form');
